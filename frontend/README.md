@@ -56,6 +56,14 @@ routes; it allows us to not reload the entire page. We have a route-mapping.tsx 
 
 The route stuff is pretty hacky. 
 
+
+Firebase will have to be set up to use real users / data. You'll need entries for:
+
+Analytics, Auth and 
+Firestore with docs for userSigs, users, projectSigs, projectIds, projects.
+
+Place your firebase config in frontend/config.ts
+
 ## Installation / starting up.
 
 For local dev :
@@ -64,7 +72,3 @@ For local dev :
 2. run yarn
 3. yarn start for dev mode
 
-Firebase will have to be set up to use real users / data. You'll need entries for:
-
-Analytics, Auth and 
-Firestore with docs for userSigs, users, projectSigs, projectIds, projects.

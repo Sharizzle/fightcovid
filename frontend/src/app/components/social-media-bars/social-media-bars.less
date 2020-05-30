@@ -1,0 +1,38 @@
+.menu-social-media-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    min-width: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+    .menu-social-media-bar-tag {
+        height: 22px;
+        position: relative;
+        bottom: 1px;
+        align-self: center;
+    }
+
+    .menu-social-media-icon {
+        margin-top: 14px;
+        margin-right: 4px;
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: @app-mobile-width) {
+    .menu-social-media-bar {
+        display: none !important;
+    }
+}
+
+
+.modal-social-media-bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    .modal-social-media-icon {
+        margin-top: 24px;
+        margin-right: 4px;
+        margin-left: 4px;
+    }
+}

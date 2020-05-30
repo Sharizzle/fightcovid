@@ -1,0 +1,85 @@
+{
+	"name": "fight-covid-uk",
+	"version": "0.0.1",
+	"description": "Frontend for the help Covid19 site.",
+	"author": "Oliver Weller-Davies",
+	"scripts": {
+		"build": "yarn run clean && webpack --config build/webpack.config.js --mode production --progress",
+		"snap": "react-snap",
+		"analyze": "yarn run clean && webpack --config build/webpack.config.js --mode production --analyze --progress",
+		"dev": "yarn run clean && webpack --config build/webpack.config.js --mode development --progress",
+		"start": "webpack-dev-server --config build/webpack.config.js --mode development",
+		"yolo": "yarn build && firebase deploy --only hosting",
+		"clean": "rimraf ./dist",
+		"lint:tsx": "eslint --ignore-path .gitignore --ext .tsx src",
+		"lint:tsx:fix": "eslint --ignore-path .gitignore --ext .tsx --fix src",
+		"prettier": "prettier --check src/**/*.tsx",
+		"prettier:fix": "prettier --write src/**/*.tsx",
+		"eslint": "eslint -c .eslintrc.js src --ext .ts,.tsx",
+		"eslint:dump": "eslint --print-config .eslintrc.js"
+	},
+	"keywords": [
+		"coronavirus",
+		"Covid19"
+	],
+	"dependencies": {
+		"@types/firebase": "^3.2.1",
+		"@types/react-dom": "^16.9.6",
+		"antd": "^3.26.6",
+		"antd-form-builder": "^2.0.0",
+		"firebase": "^7.13.2",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"react-google-button": "^0.7.1",
+		"react-linkify": "^1.0.0-alpha",
+		"react-router": "^5.1.2",
+		"react-router-dom": "^5.1.2",
+		"react-share": "^4.1.0",
+		"react-social-login-buttons": "^3.0.0",
+		"react-with-firebase-auth": "^1.3.2",
+		"throttle-typescript": "^1.0.1"
+	},
+	"devDependencies": {
+		"@types/react-router-dom": "^5.1.3",
+		"@typescript-eslint/eslint-plugin": "^2.26.0",
+		"@typescript-eslint/parser": "^2.26.0",
+		"antd-dayjs-webpack-plugin": "0.0.8",
+		"copy-webpack-plugin": "^5.1.1",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.10.1",
+		"eslint-loader": "^3.0.3",
+		"eslint-plugin-optimize-regex": "^1.1.7",
+		"eslint-plugin-prettier": "^3.1.2",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-react": "^7.19.0",
+		"eslint-plugin-react-hooks": "^2.3.0",
+		"eslint-plugin-sonarjs": "^0.5.0",
+		"file-loader": "^5.0.2",
+		"less": "^3.10.3",
+		"less-loader": "^5.0.0",
+		"lorem-ipsum": "^2.0.3",
+		"optimize-css-assets-webpack-plugin": "^5.0.3",
+		"prettier": "^2.0.2",
+		"react-snap": "1.10.0",
+		"rimraf": "^3.0.0",
+		"ts-import-plugin": "^1.6.2",
+		"ts-loader": "^6.2.1",
+		"typescript": "^3.7.4",
+		"webpack": "^4.41.5",
+		"webpack-bundle-analyzer": "^3.6.0",
+		"webpack-cli": "^3.3.10",
+		"webpack-dev-server": "^3.10.1"
+	},
+	"engines": {
+		"node": "^10"
+	},
+	"reactSnap": {
+		"source": "./dist",
+		"inlineCss": true
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn lint:tsx"
+		}
+	}
+}

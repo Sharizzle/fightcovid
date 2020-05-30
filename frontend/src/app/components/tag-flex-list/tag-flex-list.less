@@ -1,0 +1,52 @@
+@import "../../../styles/variables";
+
+.tag-flex-list-tag {
+    border: none;
+    margin-top: 6px;
+    padding-left: 12px;
+    padding-right:12px;
+    padding-top: 2px;
+    font-size: 14px;
+    cursor: pointer !important;
+    height: 24px;
+}
+
+.tag-flex-list-container {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    bottom: 4px;
+    align-items: flex-end;
+
+    .ant-badge-status-dot {
+        padding-left: 0;
+        width: 4px;
+        height:4px;
+        background-color: @text-color !important;
+    }
+
+    .tag-flex-list-tag-selected {
+        &:extend(.tag-flex-list-tag);
+        background-color: @text-color;
+        color: white;
+        padding-left:0;
+        .ant-badge-status-dot {
+            background-color:white;
+        }
+
+    }
+
+    .tag-flex-list-tag-unselected {
+        &:extend(.tag-flex-list-tag);
+        color: @text-color;
+        background-color: transparent;
+
+        &:hover {
+            background-color: @text-color;
+            color: white;
+        }
+
+    }
+
+
+}

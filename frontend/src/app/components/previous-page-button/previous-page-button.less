@@ -1,0 +1,33 @@
+@import '../../../styles/variables.less';
+
+.previous-page-button-box {
+    &:extend(.common-box);
+    &:hover {
+        &:extend(.common-box:hover);
+    }
+    position: relative;
+    bottom: 5px;
+
+    .previous-page-button-icon {
+        color: @text-color;
+        position: relative;
+        top: 6px;
+        right: 7px;
+        padding-left: 5px;
+        font-size: 13px;
+    }
+
+    .previous-page-button-text {
+        position: relative;
+        top: 4px;
+        right: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .previous-page-button-box {
+        .previous-page-button-text {
+            display: none !important;
+        }
+    }
+}

@@ -1,0 +1,295 @@
+@import '../../../styles/variables';
+
+.home-page-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-grow: 1;
+  align-self: center;
+  width:100%;
+  padding-left: 32px;
+  padding-right: 32px;
+  .intro {
+    position:relative;
+    display:flex;
+    flex-flow: row wrap;
+    margin-top: @section-margin;
+    width:100%;
+
+    .intro-logo {
+      position:relative;
+      background-image:url('/logo_big.png');
+      background-size:45%;
+      background-position:center center;
+      background-repeat: no-repeat;
+      flex:1;
+    }
+
+    .intro-text {
+      flex:3;
+      .sub-headline {
+        margin-top: @sub-headline-margin-top;
+        max-width:75%;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @media screen and (max-width: @app-mobile-width) {
+    .intro {
+      margin-top: @section-margin-mobile;
+      .intro-logo {
+          display: none;
+      }
+      .intro-text {
+        .headline-1 {
+          font-size:@headline-1-mobile-font-size;
+        }
+        .sub-headline {
+          max-width: 100%;
+          font-size: @sub-headline--mobile-font-size;
+        }
+      }
+    }
+  }
+
+  .projects-and-volunteers {
+    position:relative;
+    display:flex;
+    flex-flow: row nowrap;
+    margin-top: @section-margin;
+    width:100%;
+    justify-content: center;
+    > a {
+      margin-right:30px;
+      &:last-child {
+        margin-right:0px;
+      }
+    }
+    > a > div {
+      flex-grow: 1;
+      position:relative;
+      border-radius: @border-radius;
+      padding:30px;
+      padding-bottom:100px;
+      box-sizing: border-box;
+
+      box-shadow: 0px 15px 40px 0px rgba(0,0,0,0.12);
+      transition:box-shadow @transition-time-buttons ease-out;
+      cursor:pointer;
+      &:hover {
+        box-shadow: 0px 15px 40px 0px rgba(0,0,0,0.05);
+      }
+      .find-projects-volunteers-button {
+        position:absolute;
+        bottom:30px;
+        left:30px;
+        font-size: 16px;
+        width: 140px;
+        height: 40px;
+        color: white;
+        border: 1px solid white;
+        &:hover {
+          border: 1px solid transparent;
+          background:white !important;
+          color:#425563;
+        }
+      }
+
+      .type-name {
+        font-weight: 500;
+        color: white;
+      }
+      .type-count {
+        position:absolute;
+        top:30px;
+        right:30px;
+        opacity:0.65;
+        color: white;
+      }
+      .type-description {
+        font-size:@sub-headline-font-size;
+        line-height: 1.55em;
+        max-width:75%;
+        color: white;
+      }
+      .type-icon {
+        position:absolute;
+        width:25%;
+        height:100%;
+        right:30px;
+        bottom:30px;
+        background-size:100%;
+        background-position:bottom right;
+        background-repeat: no-repeat;
+      }
+    }
+    .projects {
+      background:@color-1;
+      .type-icon {
+        background-image:url('/homepage_icon_projects.png');
+      }
+    }
+    .volunteers {
+      background:@color-2;
+      .type-icon {
+        background-image:url('/homepage_icon_volunteers.png');
+      }
+    }
+  }
+
+  @media screen and (max-width: @app-mobile-width) {
+    .projects-and-volunteers {
+      flex-flow: column nowrap;
+      margin-top: @section-margin/2;
+      margin-bottom: @section-margin/2;
+      > a {
+        margin-right:0px;
+        margin-bottom:30px;
+        &:last-child {
+          margin-bottom:0px;
+        }
+        > div {
+          padding:15px;
+          padding-bottom:100px;
+          > .find-projects-volunteers-button  {
+            left:15px;
+            bottom:15px;
+          }
+          > .type-count {
+            top:15px;
+            right:15px;
+          }
+          > .type-icon {
+            bottom:15px;
+            right:15px;
+            width:40%;
+            opacity:0.5;
+          }
+          > .type-description {
+            max-width:100%;
+            margin-bottom:45px;
+            font-size:@sub-headline--mobile-font-size;
+          }
+        }
+      }
+    }
+  }
+
+  .recent-projects {
+    position:relative;
+    width:100%;
+    margin-top:@section-margin;
+    > .headline-2 {
+      margin-top:@section-margin/2;
+      position: relative;
+    }
+    > .recent-projects-backdrop {
+      position:absolute;
+      width:100vw;
+      left:50%;
+      margin-left:-50vw;
+      height:100%;
+      background:@color-homepage-grey-backdrop;
+    }
+    .recent-projects-container {
+      display:flex;
+      flex-flow: row wrap;
+      position:relative;
+      margin-bottom:@section-margin/2;
+      justify-content: center;
+
+      .recent-project-item {
+        position:relative;
+        flex: 1;
+        margin-right:30px;
+        background:white;
+        padding:15px;
+        box-sizing:border-box;
+        border-radius:@border-radius;
+        padding-bottom:60px;
+        &:last-child {
+          margin-right:0px;
+        }
+        .project-header-container {
+          display: flex;
+          flex-flow: row nowrap;
+          border-bottom:1px solid rgba(0, 0, 0, 0.2);
+          padding-bottom:20px;
+          padding-top:5px;
+          margin-bottom:15px;
+          .doughnut {
+            position:relative;
+            margin:auto 0px auto 0px;
+            border: 4px solid rgba(0, 0, 0, 0.3);
+            border-radius: 100px;
+            height:14px;
+            flex-basis: 14px;
+            flex-shrink: 0;
+          }
+          .project-name {
+            margin-left: 10px;
+            line-height:1.2em;
+            font-weight:500;
+          }
+        }
+        .project-description {
+          opacity: 0.7;
+          line-height:1.25em;
+        }
+        > .simple-flex-row-nowrap {
+          position:absolute;
+          left:15px;
+          bottom:15px;
+          .read-more-button {
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: @app-mobile-width) {
+    .recent-projects {
+      margin-top:0px;
+      > .headline-2 {
+        text-align: center;
+      }
+      .recent-projects-container {
+        flex-flow: column nowrap;
+
+        .recent-project-item {
+          min-height: 250px;
+          margin-right:0px;
+          margin-bottom:30px;
+        }
+      }
+    }
+  }
+
+  .about-fightcovid {
+    position:relative;
+    width:100%;
+    margin-top:@section-margin;
+    margin-bottom:@section-margin;
+    .about-fightcovid-text-container {
+      column-count:2;
+      column-gap:60px;
+      break-inside: avoid-column;
+      line-height:1.6em;
+      > p {
+        margin-top:0px;
+      }
+    }
+  }
+  @media screen and (max-width: @app-mobile-width) {
+    .about-fightcovid {
+      margin-top:@section-margin/2;
+      .about-fightcovid-text-container {
+        column-count:1;
+      }
+    }
+  }
+}

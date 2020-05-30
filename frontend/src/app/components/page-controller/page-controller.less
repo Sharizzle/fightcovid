@@ -1,0 +1,17 @@
+.page-controller-container {
+    min-height: 50px;
+    &:extend(.common-border-shadow);
+
+    .page-controller-page-text {
+        position: relative;
+        right: 3px;
+        margin-left: 4px;
+        margin-right: 5px;
+    }
+
+    @media only screen and (max-width: 450px) {
+        .page-controller-page-text {
+            display: none;
+        }
+    }
+}

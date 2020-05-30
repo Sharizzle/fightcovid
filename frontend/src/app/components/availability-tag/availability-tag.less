@@ -1,0 +1,25 @@
+.available-tag {
+    border: none;
+    margin-top: 6px;
+    padding: 2px 12px;
+    font-size: 14px;
+    margin-right: 0;
+    height: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.availability-tag-available {
+    &:extend(.available-tag);
+    background-color: #389e0d;
+}
+
+.availability-tag-volunteering {
+    &:extend(.available-tag);
+    background-color: #1890ff;
+}
+
+.availability-tag-unavailable {
+    &:extend(.available-tag);
+    background-color: #f5222d;
+}

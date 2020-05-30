@@ -1,0 +1,88 @@
+@import 'variables.less';
+
+.ant-layout-header {
+    padding: 0;
+}
+
+.ant-breadcrumb a {
+    color: @text-color;
+}
+
+.ant-breadcrumb span {
+    color: @text-color;
+}
+
+.ant-btn {
+    transition: none;
+}
+
+.ant-typography strong {
+    font-weight: 500;
+}
+
+.ant-btn:hover {
+    background-color: @color-3;
+    color: white;
+    border-color: @color-3;
+}
+
+.ant-btn-primary {
+    background-color: transparent;
+    border-color: @color-1;
+    color: @color-1;
+    box-shadow:none;
+    text-shadow:none;
+}
+.ant-btn-primary:hover {
+    background-color: @color-1;
+    border-color: @color-1;
+}
+
+.ant-card {
+    border: 1px solid #eeeeee;
+    padding: 0 16px;
+}
+
+.ant-card-body {
+    padding: 16px 16px 0;
+    width: 100%;
+}
+
+.ant-menu-horizontal {
+    border-bottom: none;
+}
+
+.ant-select-dropdown-menu-item:not(.ant-select-dropdown-menu-item-disabled) {
+    background-color: white;
+}
+
+.ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
+    background-color: @app-background;
+}
+
+.ant-form-item-control {
+    line-height: inherit;
+}
+
+.ant-checkbox-checked::after {
+    border: none;
+}
+
+.ant-typography {
+    word-break: break-word;
+}
+
+a {
+    text-decoration: none;
+    color: @link-color;
+    .ant-typography {
+        color: inherit;
+    }
+}
+
+:focus {
+    outline: none;
+}
+::-moz-focus-inner {
+    border: 0;
+}

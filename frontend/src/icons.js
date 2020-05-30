@@ -1,0 +1,17 @@
+export { default as UserOutline } from '@ant-design/icons/lib/outline/UserOutline';
+export { default as SettingOutline } from '@ant-design/icons/lib/outline/SettingOutline';
+export { default as FacebookIconOutline } from '@ant-design/icons/lib/outline/FacebookOutline';
+export { default as TwitterIconOutline } from '@ant-design/icons/lib/outline/TwitterOutline';
+export { default as LinkedinIconOutline } from '@ant-design/icons/lib/outline/LinkedinOutline';
+export { default as MenuUnfoldOutline } from '@ant-design/icons/lib/outline/MenuUnfoldOutline';
+export { default as CloseOutline } from '@ant-design/icons/lib/outline/CloseOutline';
+export { default as MinusOutline } from '@ant-design/icons/lib/outline/MinusOutline';
+export { default as SearchOutline } from '@ant-design/icons/lib/outline/SearchOutline';
+export { default as FilterIcon } from '@ant-design/icons/lib/outline/FilterOutline';
+export { default as DownOutline } from '@ant-design/icons/lib/outline/DownOutline';
+export { default as RightOutline } from '@ant-design/icons/lib/outline/RightOutline';
+export { default as LeftOutline } from '@ant-design/icons/lib/outline/LeftOutline';
+export { default as LockOutline } from '@ant-design/icons/lib/outline/LockOutline';
+export { default as HomeOutline } from '@ant-design/icons/lib/outline/HomeOutline';
+export { default as EditOutline } from '@ant-design/icons/lib/outline/EditOutline';
+export { default as CheckCircleTwoTone } from '@ant-design/icons/lib/twotone/CheckCircleTwoTone';

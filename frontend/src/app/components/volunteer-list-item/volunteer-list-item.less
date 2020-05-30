@@ -1,0 +1,48 @@
+@import '../../../styles/variables.less';
+
+.single-volunteer-item-card {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding:10px;
+    border-radius: @border-radius;
+    background: @color-list-items-grey-backdrop;
+    &:extend(.common-border-shadow);
+
+    .single-volunteer-item-header {
+        justify-content: space-between;
+        display: flex;
+        flex-flow: row wrap;
+        border-bottom:1px solid rgba(0, 0, 0, 0.2);
+        padding-bottom:15px;
+        margin-bottom:15px;
+
+        .volunteer-name {
+            font-weight:500;
+            color: #222222
+        }
+
+        .volunteer-header-small-text {
+            margin-top: 2px;
+            font-size: 13px;
+        }
+
+        .volunteer-header-left {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+    }
+
+    .see-more-button {
+        padding-top: 6px;
+    }
+
+    .volunteer-item-description {
+        font-size:@font-size;
+        margin-bottom:30px;
+        display:block;
+    }
+
+}

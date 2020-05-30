@@ -1,0 +1,196 @@
+@import '../../../styles/variables.less';
+
+.stripe {
+    margin-right: 16px;
+    flex-basis: 4px;
+}
+
+.stripe-show {
+    &:extend(.stripe);
+    background-color: @text-color;
+}
+
+.stripe-hidden {
+    &:extend(.stripe);
+}
+
+.underscore-link {
+    a, span {
+        border-bottom: 2px solid @menu-item-text-color;
+    }
+}
+
+.app-main-menu-item {
+    padding-right: 30px;
+    padding-bottom: 0;
+    a, span {
+        font-size: 0.95em;
+        color: @menu-item-text-color;
+        font-weight: 500;
+        padding-bottom: 4px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+}
+
+.app-main-menu-item-selected {
+    &:extend(.app-main-menu-item all);
+    &:extend(.underscore-link all);
+}
+
+.app-main-menu-item-hoverable {
+    &:extend(.app-main-menu-item all);
+}
+
+.app-main-menu-item-hoverable:hover {
+    &:extend(.underscore-link all);
+}
+
+.app-main-menu-container {
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding-left: 20px;
+    padding-top: 10px;
+    .home-menu-item-container {
+        min-width: 250px;
+        display: flex;
+        flex-flow: row nowrap;
+        .home-logo-container {
+            position:relative;
+            background-image:url('/logo_small.png');
+            background-size:100%;
+            background-position:center center;
+            background-repeat: no-repeat;
+            flex-basis: 25px;
+            right: 5px;
+        }
+    }
+
+
+    // DESKTOP VIEW
+    @media only screen and (min-width: @app-mobile-width) {
+
+        .app-main-menu-desktop-container {
+            flex-grow: 1;
+
+            max-width: @app-page-width;
+
+            display: flex;
+            flex-flow: row nowrap;
+
+            line-height: @app-menu-height;
+
+            .app-main-menu-desktop-create-project-button {
+                margin-right: 12px;
+            }
+
+            .app-main-menu-desktop-sign-out-button {
+                margin-right: 12px;
+            }
+
+            .app-main-menu-login-sign-up-container {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                margin-bottom: 2px;
+                margin-right: 12px;
+
+                .app-main-menu-login-sign-up-button {
+                    margin-right: 12px;
+                }
+            }
+        }
+
+        .app-main-menu-mobile-container  {
+            position: absolute !important;
+            top: -9999px !important;
+            left: -9999px !important;
+        }
+
+    }
+
+    // MOBILE VIEW
+    @media only screen and (max-width: @app-mobile-width) {
+
+        .app-main-menu-desktop-container {
+            position: absolute !important;
+            top: -9999px !important;
+            left: -9999px !important;
+        }
+
+        .app-main-menu-mobile-container {
+            display: flex;
+            flex-grow: 1;
+            flex-flow: column nowrap;
+            line-height: @app-menu-height;
+
+            .app-mobile-menu-header-container {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                padding-bottom: 0;
+                margin-bottom: 0;
+                .box {
+                    border-radius: 7px;
+                    align-self: center;
+                    transition: background-color 0.7s linear;
+                    margin-right: 30px;
+                    width: 42px;
+                    height: 42px;
+                    position: relative;
+                    .app-fold-unfold-button {
+                        position: relative;
+                        cursor: pointer;
+                        font-size: 24px;
+                        color: #444444;
+                        left: 9px;
+                    }
+                }
+                .box:hover {
+                    background-color: rgba(130, 130, 130, 0.045);
+                    -webkit-transition: background-color 120ms linear;
+                    -ms-transition: background-color 120ms linear;
+                    transition: background-color 120ms linear;
+                }
+            }
+
+            .app-mobile-menu-row-hover-container {
+                .app-mobile-menu-row {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    flex-basis: 40px;
+                    cursor: pointer;
+                    height: 40px;
+                    .row-text {
+                        position: relative;
+                        bottom: 2px;
+                        font-size: 16px;
+                        color: @text-color;
+                    }
+                }
+            }
+
+            .app-mobile-menu-row-hover-container:hover {
+                background-color: #eeeeee;
+            }
+
+        }
+    }
+
+
+    .app-main-menu-link-container {
+        flex: 1;
+        display: flex;
+        flex-flow: row nowrap;
+
+        .app-main-menu-link-stub {
+            flex-grow: 1;
+            flex-shrink: 1;
+            min-width: 0;
+            cursor: default;
+        }
+    }
+
+}

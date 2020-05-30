@@ -1,0 +1,32 @@
+@import '../../../styles/variables.less';
+
+.next-page-button-box {
+    &:extend(.common-box);
+    &:hover {
+        &:extend(.common-box:hover);
+    }
+    position: relative;
+    bottom: 5px;
+
+    .next-page-button-icon {
+        color: @text-color;
+        position: relative;
+        top: 6px;
+        padding-right: 5px;
+        font-size: 13px;
+    }
+
+    .next-page-button-text {
+        position: relative;
+        top: 4px;
+        min-width: 68px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .next-page-button-box {
+        .next-page-button-text {
+            display: none !important;
+        }
+    }
+}

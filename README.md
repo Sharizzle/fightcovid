@@ -1,8 +1,5 @@
 # Fight COVID UK monorepo
 
-A massive thanks to those getting involved in this project.
+See frontend README for a better welcome !
 
-This repo should contain all of the code for the project. Although I've included the 
-functions code, there isn't really anything there - it's just a placeholder for now.
-
-Please see the README in the frontend repo for extended information! 
+There was also a server folder here, but that wasn't entirely developed and ommitted for now. It's only needed for advanced features (like search) and when a lot of users join.

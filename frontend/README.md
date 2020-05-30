@@ -1,6 +1,6 @@
 # Fight COVID UK Frontend repo
 
-Big apologies if this is messy. I'm a (very) junior engineer with only a few weeks of coding, and I guess it doesn't help that an alarming proportion of this was codebase was developed in the early hours of the morning ;]
+Big apologies if this is messy. I'm a (very) junior engineer with only a few weeks of development time; an alarming proportion of this was codebase was developed in the early hours of the morning.
 
 I haven't had much / any time for cleanup, but if you're familiar with react / typescript, you should hopefully be able to work out what's going on.
 
@@ -32,20 +32,18 @@ Our "root" component is App. Within App, we provide 6 contexts:
 5. VolunteerSignatureContext 
 6. AnalytcsContext
 
-This architecture prevents the overfetching of data - to an extent![1] Components listen to single/centralised context values provided 
-here rather than being responsible for fetching data themselves. 
+This architecture prevents the overfetching of data (to an extent) Components listen to single/centralised context values provided here rather than being responsible for fetching data themselves. 
 
-There is still a ton of overfetching, but it isn't so bad.
+(This is approximately true.) There is still overfetching, but it isn't so bad.
 
-In general, there is probably a framework to use here, but I just hacked this together expediently. (Redux is pretty bloated and verbose, so I avoided it.)
+In general, there is probably a framework to use here, but I just hacked this together expediently. (Redux is verbose, so I avoided it.)
 
-
-Right now, everything is just client side. We fetch 'signatures' from firebase (userSig, projectSig) which are used for
+Right now, everything is just client side. We fetch 'signatures' from firebase (userSig, projectSig), which are used for
 pagination-like behaviour and filtering. These are pretty small (~50b for project sigs , ~66b for vol sigs when compressed), so
 for a few hundred projects / volunteers, it's fine to send them all to the client; for larger numbers, this must be moved
 server-side.
 
-Throughout the codebase, we don't listen to context values directly, only through certain hooks.
+Throughout the codebase, we don't listen to context values directly, only through certain hooks. (Again, approximately true.)
 --- e.g:
 ```javascript
 useFirestore: () => undefined | firebase.firestore.Firestore = () => {

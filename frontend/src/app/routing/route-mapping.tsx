@@ -27,7 +27,7 @@ export type TRouteMappingItem = {
 
 export const HomeRoute: TRouteMappingItem = {
     id: 'home',
-    title: 'Fight COVID UK',
+    title: 'CSRN',
     url: '/',
     isHome: true,
     page: <HomePage />,
@@ -111,7 +111,7 @@ export const ListVolunteersRoute: TRouteMappingItem = {
 
 export const AboutRoute: TRouteMappingItem = {
     id: 'about',
-    title: 'About fightcovid.uk',
+    title: 'About CSRN',
     url: '/about',
     page: <About />,
     isMenuItem: true,

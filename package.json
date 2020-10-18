@@ -5,7 +5,7 @@
   "author": "Oliver Weller-Davies - olliecwd <owellerdavies@gmail.com>",
   "private": true,
   "engines": {
-    "node": "^10"
+    "node": "^12"
   },
   "workspaces": ["frontend", "server"]
 }
